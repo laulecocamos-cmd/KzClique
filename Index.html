@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>KzClique</title>
+
+  <style>
+
+    * {
+
+      box-sizing: border-box;
+
+      margin: 0;
+
+      padding: 0;
+
+    }
+
+    body {
+
+      font-family: Arial, sans-serif;
+
+      background: #f5f5f5;
+
+      color: #222;
+
+      text-align: center;
+
+    }
+
+    header {
+
+      background: #111;
+
+      color: white;
+
+      padding: 45px 20px;
+
+    }
+
+    header h1 {
+
+      font-size: 42px;
+
+      color: #ffd700;
+
+      margin-bottom: 10px;
+
+    }
+
+    header p {
+
+      font-size: 18px;
+
+    }
+
+    .botao {
+
+      display: inline-block;
+
+      margin-top: 25px;
+
+      padding: 14px 35px;
+
+      background: #ffd700;
+
+      color: #111;
+
+      text-decoration: none;
+
+      font-weight: bold;
+
+      border-radius: 8px;
+
+    }
+
+    .contador {
+
+      margin: 25px auto;
+
+      font-size: 18px;
+
+      font-weight: bold;
+
+    }
+
+    .anuncio {
+
+      width: 90%;
+
+      max-width: 700px;
+
+      height: 180px;
+
+      margin: 25px auto;
+
+      background: white;
+
+      border: 2px dashed #bbb;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      color: #777;
+
+      font-weight: bold;
+
+    }
+
+    .conteudo {
+
+      padding: 20px;
+
+    }
+
+    footer {
+
+      margin-top: 40px;
+
+      padding: 25px;
+
+      background: #111;
+
+      color: white;
+
+      font-size: 14px;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <h1>KzClique</h1>
+
+    <p>Conteúdos simples para navegar, descobrir e aproveitar.</p>
+
+    <a href="#anuncios" class="botao">ENTRAR</a>
+
+  </header>
+
+  <div class="contador">
+
+    Visitas nesta sessão: <span id="visitas">0</span>
+
+  </div>
+
+  <div class="conteudo">
+
+    <div class="anuncio" id="anuncios">
+
+      ESPAÇO PARA PUBLICIDADE
+
+    </div>
+
+    <h2>Bem-vindo ao KzClique!</h2>
+
+    <p style="margin-top: 15px;">
+
+      Um espaço simples criado para apresentar conteúdos e publicidade.
+
+    </p>
+
+    <div class="anuncio">
+
+      ESPAÇO PARA PUBLICIDADE
+
+    </div>
+
+  </div>
+
+  <footer>
+
+    © 2026 KzClique — Todos os direitos reservados.
+
+  </footer>
+
+  <script>
+
+    let visitas = sessionStorage.getItem("visitas") || 0;
+
+    visitas++;
+
+    sessionStorage.setItem("visitas", visitas);
+
+    document.getElementById("visitas").textContent = visitas;
+
+  </script>
+
+</body>
+
+</html>
